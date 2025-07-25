@@ -119,6 +119,13 @@ theory OperatorSpecs
     (forall i. 0 <= i < length starts ->
       output.shape[i] = ends[i] - starts[i])
 
+  (* Slice result is a subset of the input data *)
+  lemma slice_subset:
+    forall input output: tensor, starts ends: array int, i: int.
+    slice_spec input output starts ends /\
+    0 <= i < output.size ->
+    exists j: int. 0 <= j < input.size /\ output.data[i] = input.data[j]
+
   (* Upsample operator specification *)
   predicate upsample_spec (input output: tensor) (scale_factors: array real) =
     valid_tensor input /\
