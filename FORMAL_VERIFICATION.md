@@ -18,6 +18,7 @@ We have successfully added **formal verification for ONNX operators** to RunNX u
   - Bounded outputs: `∀x: 0 < sigmoid(x) < 1`
   - Idempotency: `ReLU(ReLU(x)) = ReLU(x)`
   - Monotonicity properties
+  - Slice subset: `slice(input)[i]` comes from `input`
 
 ### 2. **Verification Infrastructure**
 - **Python verification script** (`formal/verify_operators.py`):

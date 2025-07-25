@@ -120,7 +120,8 @@ class OperatorVerifier:
             "relu": ["relu_spec", "relu_non_negative", "relu_idempotent", "relu_monotonic"],
             "sigmoid": ["sigmoid_spec", "sigmoid_bounded", "sigmoid_monotonic"],
             "transpose": ["transpose_2d_spec", "transpose_involution"],
-            "reshape": ["reshape_spec", "reshape_preserves_data"]
+            "reshape": ["reshape_spec", "reshape_preserves_data"],
+            "slice": ["slice_spec", "slice_subset"]
         }
         
         if operator_name.lower() not in operator_specs:
@@ -240,7 +241,7 @@ mod operator_property_tests {{
         print(f"🔧 Using prover: {prover}")
         
         # Verify all operators
-        operators = ["add", "mul", "matmul", "relu", "sigmoid", "transpose", "reshape"]
+        operators = ["add", "mul", "matmul", "relu", "sigmoid", "transpose", "reshape", "slice"]
         all_passed = True
         
         for operator in operators:
