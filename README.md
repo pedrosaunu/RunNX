@@ -362,7 +362,7 @@ For explicit control, use:
 | Operator             | Status   | Notes                                |
 | -------------------- | -------- | ------------------------------------ |
 | `Concat`             | ✅      | Tensor concatenation for FPN         |
-| `Slice`              | ✅      | Tensor slicing                       |
+| `Slice`              | ✅      | Tensor slicing (formally verified via `slice_subset`) |
 | `Upsample`           | 🚧      | Feature upsampling (simplified)      |
 | `MaxPool`            | 🚧      | Max pooling (simplified)             |
 | `Softmax`            | ✅      | Classification probabilities         |
