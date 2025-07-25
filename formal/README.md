@@ -99,7 +99,7 @@ Our specifications cover:
 
 #### YOLO Object Detection Operators
 - **Concatenation**: Shape preservation and data integrity
-- **Slicing**: Bounds checking and subset properties
+ - **Slicing**: Bounds checking and subset properties (`slice_subset` lemma)
 - **Upsampling**: Scale factor validation and shape scaling
 - **MaxPooling**: Monotonicity preservation
 - **Non-Maximum Suppression**: Score ordering and IoU threshold guarantees
